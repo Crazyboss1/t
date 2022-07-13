@@ -79,6 +79,8 @@ CHANNEL_ID = int(-1001161499656)
 @Client.on_message(filters.group & filters.text & ~filters.edited & filters.incoming)
 async def give_filter(client, message):
     k = await manual_filters(client, message)
+    await asyncio.sleep(600)
+    await k.delete()
     if k == False:
         await auto_filter(client, message)   
 
