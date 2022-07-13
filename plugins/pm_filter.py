@@ -79,8 +79,6 @@ CHANNEL_ID = int(-1001161499656)
 @Client.on_message(filters.group & filters.text & ~filters.edited & filters.incoming)
 async def give_filter(client, message):
     k = await manual_filters(client, message)
-    await asyncio.sleep(600)
-    await k.delete()
     if k == False:
         await auto_filter(client, message)   
 
@@ -2365,31 +2363,39 @@ async def manual_filters(client, message, text=False):
                 try:
                     if fileid == "None":
                         if btn == "[]":
-                            await client.send_message(group_id, reply_text, disable_web_page_preview=True)
+                            Joelkb1 = await client.send_message(group_id, reply_text, disable_web_page_preview=True)
+                            await asyncio.sleep(600)
+                            await Joelkb1.delete()
                         else:
                             button = eval(btn)
-                            await client.send_message(
+                            Joelkb2 = await client.send_message(
                                 group_id,
                                 reply_text,
                                 disable_web_page_preview=True,
                                 reply_markup=InlineKeyboardMarkup(button),
                                 reply_to_message_id=reply_id
                             )
+                            await asyncio.sleep(600)
+                            await Joelkb2.delete()
                     elif btn == "[]":
-                        await client.send_cached_media(
+                        Joelkb3 = await client.send_cached_media(
                             group_id,
                             fileid,
                             caption=reply_text or "",
                             reply_to_message_id=reply_id
                         )
+                        await asyncio.sleep(600)
+                        await Joelkb3.delete()
                     else:
                         button = eval(btn)
-                        await message.reply_cached_media(
+                        Joelkb4 = await message.reply_cached_media(
                             fileid,
                             caption=reply_text or "",
                             reply_markup=InlineKeyboardMarkup(button),
                             reply_to_message_id=reply_id
                         )
+                        await asyncio.sleep(600)
+                        await Joelkb4.delete()
                 except Exception as e:
                     logger.exception(e)
                 break
