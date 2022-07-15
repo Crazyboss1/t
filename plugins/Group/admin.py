@@ -15,7 +15,7 @@ from pyrogram.errors import (
 from pyrogram.types import Message
 from pyrogram import Client as Tiger
 
-from info import LOGGER, BOT_ID, SUPPORT_GROUP
+from info import LOGGER, BOT_ID, SUPPORT_CHAT
 from plugins.Group.database.approve_db import Approve
 from plugins.Group.database.reporting_db import Reporting
 from plugins.Group.utils.caching import ADMIN_CACHE, TEMP_ADMIN_CACHE_BLOCK, admin_cache_reload
@@ -87,7 +87,7 @@ async def adminlist_show(_, m: Message):
             ef = str(ef) + f"{admin_list}\n"
             await m.reply_text(
                 ("general.some_error").format(
-                    SUPPORT_GROUP=SUPPORT_GROUP,
+                    SUPPORT_GROUP=SUPPORT_CHAT,
                     ef=ef,
                 ),
             )
@@ -121,7 +121,7 @@ async def reload_admins(_, m: Message):
     except RPCError as ef:
         await m.reply_text(
             ("general.some_error").format(
-                SUPPORT_GROUP=SUPPORT_GROUP,
+                SUPPORT_GROUP=SUPPORT_CHAT,
                 ef=ef,
             ),
         )
@@ -365,7 +365,7 @@ async def promote_usr(c: Tiger, m: Message):
     except RPCError as e:
         await m.reply_text(
             ("general.some_error").format(
-                SUPPORT_GROUP=SUPPORT_GROUP,
+                SUPPORT_GROUP=SUPPORT_CHAT,
                 ef=e,
             ),
         )
@@ -451,7 +451,7 @@ async def demote_usr(c: Tiger, m: Message):
     except RPCError as ef:
         await m.reply_text(
             ("general.some_error").format(
-                SUPPORT_GROUP=SUPPORT_GROUP,
+                SUPPORT_GROUP=SUPPORT_CHAT,
                 ef=ef,
             ),
         )
@@ -486,7 +486,7 @@ async def get_invitelink(c: Tiger, m: Message):
     except RPCError as ef:
         await m.reply_text(
             ("general.some_error").format(
-                SUPPORT_GROUP=SUPPORT_GROUP,
+                SUPPORT_GROUP=SUPPORT_CHAT,
                 ef=ef,
             ),
         )
