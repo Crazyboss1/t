@@ -29,10 +29,18 @@ i𝗍𝗌 𝖾𝖺𝗌𝗒 𝗍𝗈 𝗎𝗌𝖾 𝗆𝖾; 𝗃𝗎𝗌𝗍 𝖺
 
 🔖 𝑸𝒖𝒐𝒕𝒆 : ആരും പേടിക്കേണ്ട എല്ലാവർക്കും കിട്ടും ™️""" 
 
-    ANYFILECAPTION_TXT = """**File Name:**
-`{file_name}`         
-**Size:** `{file_size}`
-`This File will be deleted after 10 minutes!`"""
+    CREDITS_TXT = """ • <h1><u>Thanks To</u></h1>
+ • Thanks To Dan For His Awesome [Library](https://github.com/pyrogram/pyrogram)
+ • Thanks To Mahesh For His Awesome [Media-Search-bot](https://github.com/Mahesh0253/Media-Search-bot)
+ • Thanks To [Trojanz](https://github.com/trojanzhex) for Their Awesome [Unlimited Filter Bot](https://github.com/TroJanzHEX/Unlimited-Filter-Bot) And [AutoFilterBoT](https://github.com/trojanzhex/auto-filter-bot)
+ • Thanks To All Everyone In This Journey
+ • Thanks To [EvamariaTG](https://raw.githubusercontent.com/EvamariaTG) for their awesome [EvaMaria Bot](https://raw.githubusercontent.com/EvamariaTG/EvaMaria)
+ • Thanks To Me 😂
+
+ • <h1><u>Main Editors</u></h1>
+
+ • <a href='tg://user?id=1951205538'>༒ᶜʳᵃᶻʸᴮᴼˢˢ卂乃卄丨丂卄乇Ҝ༒</a>
+ • <a href='tg://user?id=1177577143'>Jᴏᴇʟ ᠰ TɢX</a>
 
     WIKIPEDIA_TXT = """❍ /wiki <ϙᴜᴇʀʏ><b>: ᴡɪᴋɪᴘᴇᴅɪᴀ ʏᴏᴜʀ ϙᴜᴇʀʏ
 *Wᴀʟʟᴘᴀᴘᴇʀs:</b>"""
