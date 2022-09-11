@@ -36,9 +36,7 @@ PyDictionary
 PyPDF2
 prettyconf
 cachetools
-yt-dlp
 Heroku3
-speedtest
 pyyaml
 Shazamio
 Wikipedia
