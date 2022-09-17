@@ -737,16 +737,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton('✗ ᴄʟᴏsᴇ ᴛʜᴇ ᴍᴇɴᴜ ✗', callback_data='close_data')
         ]]
-        await query.message.edit_text(
-            text="● ◌ ◌"
-        )
-        await query.message.edit_text(
-            text="● ● ◌"
-        )
-        await query.message.edit_text(
-            text="● ● ●"
-        )
-        reply_markup = InlineKeyboardMarkup(buttons)      
+        reply_markup = InlineKeyboardMarkup(buttons)  
+        m=await query.message.reply_text("● ◌ ◌")
+        n=await m.edit("● ● ◌")
+        o=await n.edit("● ● ●")
+        await asyncio.sleep(1)
+        await o.delete()    
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
