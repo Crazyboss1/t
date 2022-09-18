@@ -43,7 +43,7 @@ i𝗍𝗌 𝖾𝖺𝗌𝗒 𝗍𝗈 𝗎𝗌𝖾 𝗆𝖾; 𝗃𝗎𝗌𝗍 𝖺
  • <a href='tg://user?id=1177577143'>Jᴏᴇʟ ᠰ TɢX</a>
 
     WIKIPEDIA_TXT = """/wiki <ϙᴜᴇʀʏ><b>: ᴡɪᴋɪᴘᴇᴅɪᴀ ʏᴏᴜʀ ϙᴜᴇʀʏ
-*Wᴀʟʟᴘᴀᴘᴇʀs:</b>"""
+- *Wᴀʟʟᴘᴀᴘᴇʀs:</b>"""
 
     SHAZAM_TXT = """<b>Shazam Music Founder Module</b>
 - <b>help=</b> Helps You To Recognize | Discover A Song
