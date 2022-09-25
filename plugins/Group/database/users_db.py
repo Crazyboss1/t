@@ -47,7 +47,7 @@ class Users(MongoDB):
             return collection.find_all()
 
     @staticmethod
-    def get_user_info(self, name: str, user_id: int or str):
+    def get_user_info(user_id: int or str):
         with INSERTION_LOCK:
             collection = MongoDB(Users.db_name)
             if isinstance(user_id, int):
@@ -55,9 +55,6 @@ class Users(MongoDB):
             elif isinstance(user_id, str):
                 # user_id[1:] because we don't want the '@' in the username search!
                 curr = collection.find_one({"username": user_id[1:]})
-            
-            elif isinstance(name, str):
-                name = collection.find_one({"name": name})
             
             else:
                 curr = None
