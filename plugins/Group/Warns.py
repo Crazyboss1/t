@@ -249,7 +249,7 @@ async def remove_last_warn_btn(c: Tiger, q: CallbackQuery):
     action = args[1]
     user_id = int(args[2])
     chat_id = int(q.message.chat.id)
-    user = Users.get_user_info(int(user_id))
+    user = Users.get_user_info(user_id)
     user_first_name = user["name"]
 
 
