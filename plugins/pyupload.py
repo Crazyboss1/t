@@ -5,7 +5,7 @@ import os
 import time
 
 from info import tbot
-from plugins.helper_funcs.events import register
+from plugins.helper_functions.events import register
 
 OWNER_ID = 2107036689
 
