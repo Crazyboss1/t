@@ -9,7 +9,7 @@ OWNER_ID = 1951205538
 
 from datetime import datetime
 path = TEMP_DOWNLOAD_DIRECTORY = "./"
-water = "./image/tigershroff.png"
+water = "./TigerShroff/image/tigershroff.png"
 client = tbot
 
 @register(pattern=r"^/pyupload ?(.*)")
@@ -21,7 +21,7 @@ async def Prof(event):
     thumb = water
     message_id = event.message.id
     input_str = event.pattern_match.group(1)
-    the_plugin_file = "./kashmira/modules/{}.py".format(input_str)
+    the_plugin_file = "./TigerShroff/plugins/{}.py".format(input_str)
     if os.path.exists(the_plugin_file):
      message_id = event.message.id
      await event.client.send_file(
