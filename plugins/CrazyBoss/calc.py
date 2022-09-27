@@ -7,7 +7,7 @@ Fetch App Details from Playstore.
 import io
 import sys
 import traceback
-from plugins.helper_functions import register
+from plugins.helper_functions.events import register
 
 plugin_category = "utils"
 
