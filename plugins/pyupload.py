@@ -1,5 +1,3 @@
-from kashmira import tbot 
-import os
 import asyncio
 import os
 import time
@@ -7,7 +5,7 @@ import time
 from info import tbot
 from plugins.helper_functions.events import register
 
-OWNER_ID = 2107036689
+OWNER_ID = 1951205538
 
 from datetime import datetime
 path = TEMP_DOWNLOAD_DIRECTORY = "./"
