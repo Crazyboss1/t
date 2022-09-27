@@ -9,7 +9,7 @@ OWNER_ID = 1951205538
 
 from datetime import datetime
 path = TEMP_DOWNLOAD_DIRECTORY = "./"
-water = "./image/TigerShroff.png"
+water = "./image/tigershroff.png"
 client = tbot
 
 @register(pattern=r"^/pyupload ?(.*)")
