@@ -1935,28 +1935,31 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='extra')
         ]]
-        reply1 = await query.message.reply_text(
-            text="▢▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply2 = await reply1.edit_text(
-            text="▣▢▢"
-        )
-        await asyncio.sleep(0.5)
-        reply3 = await reply2.edit_text(
-            text="▣▣▢"
-        )
-        await asyncio.sleep(0.5)
-        reply4 = await reply3.edit_text(
-            text="▣▣▣"
-        )
-        await reply4.delete()
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.ADMIN_TXT,
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )
+        if query.from_user.id not in ADMINS:
+            await query.answer(text=f"Hey {query.from_user.first_name}, This is an admin module.", show_alert=True)
+        else:
+            reply1 = await query.message.reply_text(
+                text="▢▢▢"
+            )
+            await asyncio.sleep(0.5)
+            reply2 = await reply1.edit_text(
+                text="▣▢▢"
+            )
+            await asyncio.sleep(0.5)
+            reply3 = await reply2.edit_text(
+                text="▣▣▢"
+            )
+            await asyncio.sleep(0.5)
+            reply4 = await reply3.edit_text(
+                text="▣▣▣"
+            )
+            await reply4.delete()
+            reply_markup = InlineKeyboardMarkup(buttons)
+            await query.message.edit_text(
+                text=script.ADMIN_TXT,
+                reply_markup=reply_markup,
+                parse_mode='html'
+            )
     elif query.data == "abook":
         buttons = [[
             InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='help')
