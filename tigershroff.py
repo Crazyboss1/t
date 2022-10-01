@@ -13,7 +13,9 @@ from database.ia_filterdb import Media
 from database.users_chats_db import db
 from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR
 from utils import temp
+from telethon import TelegramClient
 
+tbot = TelegramClient("abhisheksvlog", API_ID, API_HASH)
 
 class Bot(Client):
 
@@ -46,5 +48,5 @@ class Bot(Client):
         await super().stop()
         logging.info("Rebooting Tiger Shroff Activating UI Rebooted")
 
-app = Bot()
+app = Bot, tbot()
 app.run()
