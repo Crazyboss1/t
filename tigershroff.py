@@ -17,8 +17,6 @@ from telethon import TelegramClient
 
 tbot = TelegramClient("abhisheksvlog", API_ID, API_HASH)
 
-tbot.start
-
 class Bot(Client):
 
     def __init__(self):
@@ -50,5 +48,6 @@ class Bot(Client):
         await super().stop()
         logging.info("Rebooting Tiger Shroff Activating UI Rebooted")
 
-app = Bot()
-app.run()
+
+app.start
+tbot.start
