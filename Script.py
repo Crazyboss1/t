@@ -42,6 +42,8 @@ i𝗍𝗌 𝖾𝖺𝗌𝗒 𝗍𝗈 𝗎𝗌𝖾 𝗆𝖾; 𝗃𝗎𝗌𝗍 𝖺
  • <a href='tg://user?id=1951205538'>༒ᶜʳᵃᶻʸᴮᴼˢˢ卂乃卄丨丂卄乇Ҝ༒</a>
  • <a href='tg://user?id=1177577143'>Jᴏᴇʟ ᠰ TɢX</a> """
 
+    TOOLS_TXT = """Modules That are needed For Groups"""
+
     WIKIPEDIA_TXT = """. /wiki <ϙᴜᴇʀʏ><b>: ᴡɪᴋɪᴘᴇᴅɪᴀ ʏᴏᴜʀ ϙᴜᴇʀʏ
 - *Wᴀʟʟᴘᴀᴘᴇʀs:</b>"""
 
