@@ -47,5 +47,5 @@ class Bot(Client):
         logging.info("Rebooting Tiger Shroff Activating UI Rebooted")
 
 
-app = Bot
+app = Bot()
 app.run()
