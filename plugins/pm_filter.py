@@ -783,64 +783,67 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-    elif query.data == "help":
+     
+    elif query.data == "help2"
         buttons = [[
-            InlineKeyboardButton('ᴍᴀɴᴜᴇʟ ғɪʟᴛᴇʀ', callback_data='manuelfilter'),
-            InlineKeyboardButton('ᴀᴜᴛᴏ ғɪʟᴛᴇʀ', callback_data='autofilter'),
-            InlineKeyboardButton('ᴄᴏɴɴᴇᴄᴛɪᴏɴs', callback_data='coct'),
+            InlineKeyboardButton('Auto Filter', callback_data='autofilter'),
+            InlineKeyboardButton('Tools', callback_data='tools')
             ],[
+            InlineKeyboardButton('Group Management', callback_data='group')
+            m=await query.message.reply_text("● ◌ ◌")
+            n=await m.edit("● ● ◌")
+            o=await n.edit("● ● ●")
+            await asyncio.sleep(1)
+            await o.delete()
+            reply_markup = InlineKeyboardMarkup(buttons)
+            await query.message.edit_text(
+            text="Select your required module from below!",
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "tools":
+        buttons = [[
             InlineKeyboardButton('sᴏɴɢ', callback_data='songs'),
             InlineKeyboardButton('ᴇxᴛʀᴀ', callback_data='extra'),
-            InlineKeyboardButton("ᴠɪᴅᴇᴏ", callback_data='video'),
+            InlineKeyboardButton("ᴠɪᴅᴇᴏ", callback_data='video')
             ],[
             InlineKeyboardButton('ᴘɪɴ', callback_data='pin'), 
             InlineKeyboardButton('ᴘᴀsᴛᴇ', callback_data='pastes'),
-            InlineKeyboardButton("ɪᴍᴀɢᴇ", callback_data='image'),
+            InlineKeyboardButton("ɪᴍᴀɢᴇ", callback_data='image')
             ],[
-            InlineKeyboardButton('ғᴜɴ', callback_data='fun'), 
-            InlineKeyboardButton('ᴊsᴏɴ', callback_data='son'),
+            InlineKeyboardButton('ғᴜɴ', callback_data='fun'),
             InlineKeyboardButton('ᴛᴛs', callback_data='ttss'),
+            InlineKeyboardButton('ᴘɪɴɢ', callback_data='pings')
             ],[
-            InlineKeyboardButton('ᴘᴜʀɢᴇ', callback_data='purges'),
-            InlineKeyboardButton('ᴘɪɴɢ', callback_data='pings'),
             InlineKeyboardButton('ᴛᴇʟᴇɢʀᴀᴘʜ', callback_data='tele'),
-            ],[
             InlineKeyboardButton('ᴡʜᴏɪs', callback_data='whois'),
-            InlineKeyboardButton('ᴍᴜᴛᴇ', callback_data='restric'),
-            InlineKeyboardButton('ᴋɪᴄᴋ', callback_data='zombies'),
+            InlineKeyboardButton('ʏᴛ-ᴛʜᴜᴍʙ', callback_data='ytthumb')
             ],[
-            InlineKeyboardButton('ʀᴇᴘᴏʀᴛ', callback_data='report'),
-            InlineKeyboardButton('ʏᴛ-ᴛʜᴜᴍʙ', callback_data='ytthumb'),
             InlineKeyboardButton('sᴛɪᴄᴋᴇʀ-ɪᴅ', callback_data='sticker'),
-            ],[
             InlineKeyboardButton('ᴄᴏᴠɪᴅ', callback_data='corona'),
-            InlineKeyboardButton('ᴀᴜᴅɪᴏ-ʙᴏᴏᴋ', callback_data='abook'),
-            InlineKeyboardButton('ᴜʀʟ-sʜᴏʀᴛ', callback_data='urlshort'),
+            InlineKeyboardButton('ᴀᴜᴅɪᴏ-ʙᴏᴏᴋ', callback_data='abook')
             ],[
+            InlineKeyboardButton('ᴜʀʟ-sʜᴏʀᴛ', callback_data='urlshort'),
             InlineKeyboardButton('ɢ-ᴛʀᴀɴs', callback_data='gtrans'),
-            InlineKeyboardButton('ғɪʟᴇ-sᴛᴏʀᴇ', callback_data='newdata'),
-            InlineKeyboardButton('sʜᴀʀᴇ-ᴛᴇxᴛ', callback_data='sharetext'),
+            InlineKeyboardButton('sʜᴀʀᴇ-ᴛᴇxᴛ', callback_data='sharetext')
             ],[
             InlineKeyboardButton('ᴘᴀssᴡᴏʀᴅ-ɢᴇɴ', callback_data='genpassword'),
             InlineKeyboardButton('ᴛᴏʀʀᴇɴᴛ', callback_data='torrent'),
-            InlineKeyboardButton('ᴍᴀʟʟᴜ ᴀᴜɴᴛʏ', callback_data='aunty'),
+            InlineKeyboardButton('ᴍᴀʟʟᴜ ᴀᴜɴᴛʏ', callback_data='aunty')
             ],[
             InlineKeyboardButton('ᴍᴀᴍᴍᴏᴋᴀ', callback_data='mammoka'),
             InlineKeyboardButton('Bot Status', callback_data='restatus'),
-            InlineKeyboardButton('Text To Img', callback_data='img'),
+            InlineKeyboardButton('Text To Img', callback_data='img')
             ],[
             InlineKeyboardButton('ՏTYᒪIՏᕼ ᖴOᑎTՏ', callback_data='fonts'),
             InlineKeyboardButton('Carbon', callback_data='carbon'),
-            InlineKeyboardButton('Lyrics', callback_data='lyrics'),
+            InlineKeyboardButton('Lyrics', callback_data='lyrics')
             ],[
             InlineKeyboardButton('IP Address', callback_data='ip'),
             InlineKeyboardButton('Shazam', callback_data='shazam'),
             InlineKeyboardButton('Wikipedia', callback_data='wikipedia'),
             ],[
-            InlineKeyboardButton('Warns', callback_data='warn'),
-            InlineKeyboardButton('Locks', callback_data='lock'),
-            ],[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='start'),
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help2'),
             InlineKeyboardButton('sᴛᴀᴛᴜs', callback_data='stats'),
             InlineKeyboardButton('ᴄʟᴏsᴇ x', callback_data='close_data')
         ]]
@@ -853,6 +856,37 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer("𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝗍𝗈 𝗆𝗒 𝖧𝖾𝗅𝗉 𝗆𝗈𝖽𝗎𝗅𝖾")
         await query.message.edit_text(
             text=script.HELP_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "group":
+        buttons= [[
+            InlineKeyboardButton('𝐴𝑢𝑡𝑜 𝐹𝑖𝑙𝑡𝑒𝑟', callback_data='autofilter'),
+            InlineKeyboardButton('ᴍᴀɴᴜᴇʟ ғɪʟᴛᴇʀ', callback_data='manuelfilter'),
+            InlineKeyboardButton('ᴄᴏɴɴᴇᴄᴛɪᴏɴs', callback_data='coct')
+            ],[
+            InlineKeyboardButton('ᴊsᴏɴ', callback_data='son'),
+            InlineKeyboardButton('ᴘᴜʀɢᴇ', callback_data='purges'),
+            InlineKeyboardButton('ᴍᴜᴛᴇ', callback_data='restric')
+            ],[
+            InlineKeyboardButton('ᴋɪᴄᴋ', callback_data='zombies'),
+            InlineKeyboardButton('ʀᴇᴘᴏʀᴛ', callback_data='report'),
+            InlineKeyboardButton('ғɪʟᴇ-sᴛᴏʀᴇ', callback_data='newdata')
+            ],[
+            InlineKeyboardButton('Warns', callback_data='warn'),
+            InlineKeyboardButton('Locks', callback_data='lock'),
+            ],[
+            InlineKeyboardButton('« ʙᴀᴄᴋ', callback_data='help2'),
+            InlineKeyboardButton('ᴄʟᴏsᴇ ✗', callback_data='close_data'),
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        m=await query.message.reply_text("● ◌ ◌")
+        n=await m.edit("● ● ◌")
+        o=await n.edit("● ● ●")
+        await asyncio.sleep(1)
+        await o.delete()
+        await query.message.edit_text(
+            text=script.TOOLS_TXT.format(temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode='html'
         )
