@@ -132,4 +132,4 @@ LOG_STR += ("auto delete is active , bot will be deleting movie results when {DE
 
 tbot = TelegramClient("abhisheksvlog", API_ID, API_HASH)
 
-tbot.start
+tbot.start()
