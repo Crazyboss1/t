@@ -8,6 +8,8 @@ import io
 import sys
 import traceback
 from plugins.helper_functions.events import register
+from telethon import types
+from telethon.tl import functions
 
 plugin_category = "utils"
 
@@ -16,7 +18,7 @@ plugin_category = "utils"
 async def calculator(event):
     "To solve basic mathematics equations."
     cmd = event.text.split(" ", maxsplit=1)[1]
-    event = await reply_text(event, "Calculating ...")
+    event = await event.reply("Calculating ...")
     old_stderr = sys.stderr
     old_stdout = sys.stdout
     redirected_output = sys.stdout = io.StringIO()
