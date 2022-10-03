@@ -38,6 +38,5 @@ prettyconf
 cachetools
 Heroku3
 pyyaml
-Shazamio
 Wikipedia
-ffmpeg-python>=0.2.0
+hachoir
