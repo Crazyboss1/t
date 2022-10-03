@@ -5,7 +5,7 @@ import zipfile
 from telethon import types
 from telethon.tl import functions
 
-from info import TEMP_DOWNLOAD_DIRECTORY
+from info import TMP_DOWNLOAD_DIRECTORY as TEMP_DOWNLOAD_DIRECTORY
 from info import tbot as client
 from plugins.helper_functions.events import register
 
