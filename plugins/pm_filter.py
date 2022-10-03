@@ -782,8 +782,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text="Select your required mode from below!",
             reply_markup=reply_markup,
             parse_mode='html'
-        )
-     
+        )  
     elif query.data == "help2"
         buttons = [[
             InlineKeyboardButton('Auto Filter', callback_data='autofilter'),
