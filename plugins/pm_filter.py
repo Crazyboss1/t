@@ -783,8 +783,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )  
-    elif query.data == "help2"
-        buttons = [[
+    elif query.data == "help2":
+        buttons= [[
             InlineKeyboardButton('Auto Filter', callback_data='autofilter'),
             InlineKeyboardButton('Tools', callback_data='tools')
             ],[
@@ -796,9 +796,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         o=await n.edit("● ● ●")
         await asyncio.sleep(1)
         await o.delete()
-        await query.answer("𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝗍𝗈 𝗆𝗒 𝖧𝖾𝗅𝗉 𝗆𝗈𝖽𝗎𝗅𝖾")
         await query.message.edit_text(
-            text=script.HELP_TXT.format(query.from_user.mention),
+            text=script.ABOUT_TXT.format(temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode='html'
         )
