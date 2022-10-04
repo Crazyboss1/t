@@ -371,7 +371,7 @@ async def member_has_left(c: Client, member: ChatMemberUpdated):
                 disable_web_page_preview=True,
             )
             if ooo:
-                db.set_cleangoodbye_id(int(ooo.message_id))
+                db.set_cleangoodbye_id(int(ooo.id))
             return
         except RPCError as e:
             print(e)
