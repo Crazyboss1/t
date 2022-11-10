@@ -1,1 +1,1 @@
-worker: python3 tigershroff.py
+wev: python3 tigershroff.py
