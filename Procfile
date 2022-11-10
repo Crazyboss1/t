@@ -1,1 +1,1 @@
-wev: python3 tigershroff.py
+web: python3 tigershroff.py
