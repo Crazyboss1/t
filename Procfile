@@ -1,1 +1,1 @@
-web: python3 tigershroff.py
+worker: python3 tigershroff.py
